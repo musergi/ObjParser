@@ -6,6 +6,11 @@ VertexReference::VertexReference(unsigned int v, unsigned int vt,
 {
 }
 
+bool VertexReference::operator==(VertexReference const &other)
+{
+    return v == other.v && vt == other.vt && vn == other.vn;
+}
+
 std::string const VertexReference::ToString() const
 {
     std::stringstream ss;
