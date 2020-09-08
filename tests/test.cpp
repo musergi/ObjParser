@@ -12,4 +12,6 @@ int main()
         << content.GetGeometricVertex(vertex.v).ToString() << " "
         << content.GetTextureVertex(vertex.vt).ToString() << " "
         << content.GetVertexNormal(vertex.vn).ToString() << std::endl;
+    content.TriangulateFaces();
+    std::cout << content.ToString() << std::endl;
 }

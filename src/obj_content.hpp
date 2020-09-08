@@ -27,9 +27,12 @@ public:
     VertexNormal const &GetVertexNormal(unsigned int ref) const;
     Face const &GetFace(unsigned int index) const;
     unsigned int GetFaceCount() const;
+    void TriangulateFaces();
     std::string const ToString() const;
 
 private:
     template<typename T>
     std::string const GetVectorString(std::vector<T> const &vector) const;
+    std::vector<Face> const Triangulate(unsigned int index) const;
+    void ReplaceFaceByFaces(unsigned int index, std::vector<Face> const &new_faces);
 };
